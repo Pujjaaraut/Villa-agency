@@ -20,13 +20,13 @@ Villa.com is a web application that allows users to browse, view details, and sc
 ## Features
 
 - **Home:** Landing page with an overview of the website.
-- ![Home Page](images/home.png)
+- ![Home Page](images/R1.png)
 - **Properties:** List of available properties for booking.
-- ![Properties Page](images/properties.png)
+- ![Properties Page](images/R2.png)
 - **Property Details:** Detailed information about each property.
-- ![Property Details Page](images/property_details.png)
+- ![Property Details Page](images/R3.png)
 - **Contact Us:** Contact form for user inquiries.
-- ![Contact Us Page](images/contact_us.png)
+- ![Contact Us Page](images/R4.png)
 - **Schedule a Visit:** Form to schedule a visit to a property.
 
 ## Installation
