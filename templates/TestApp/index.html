@@ -51,8 +51,8 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i><a href="mailto:info@company.com" target="_blank" </i>
-                info@company.com</a></li>
+            <li><i class="fa fa-envelope"></i> <a href="mailto: info@company.com" target="_blank"> info@company.com </a>
+            </li>
             <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
           </ul>
         </div>
@@ -86,14 +86,25 @@ https://templatemo.com/tm-591-villa-agency
               <li><a href="/property-details/">Property Details</a></li>
               <li><a href="/contact/">Contact Us</a></li>
               <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+              {% if request.user.is_authenticated is not True %}
+              <li><a href="accounts/login">Login</a></li>
+              {% endif%}
+              {% if request.user.is_authenticated is True %}
+              <li><a> Welcome {{request.user}}</a></li>
+              <li><a href="accounts/logout">Logout</a></li>
+              {%endif%}
+
         </div>
+     
       </div>
+      </ul>
+
+      
+      <!-- ***** Menu End ***** -->
+
+      </nav>
+    </div>
+    </div>
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -141,32 +152,30 @@ https://templatemo.com/tm-591-villa-agency
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  What is the cancellation policy?
+                  Best useful links ?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p> Our cancellation policy varies depending on the villa and the time of year. Generally,
-                    cancellations made more than 30 days before the check-in date will receive a full refund, while
-                    cancellations made within 30 days may incur a fee. Please refer to the specific villa's cancellation
-                    policy during the booking process. </p>
-                </div>
+                  Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business.
+                  TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates"
+                    target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How can I contact customer support?
+                  How does this work ?
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p> You can contact our customer support team via phone, email, or live chat on our website. Our team
-                    is available 24/7 to assist you with any questions or concerns you may have. Contact details can be
-                    found on our 'Contact Us' page.</p>
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                  incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
                 </div>
               </div>
             </div>
@@ -180,9 +189,9 @@ https://templatemo.com/tm-591-villa-agency
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p>Our villa agency offers meticulously selected luxury villas and personalized concierge services,
-                    ensuring an exceptional stay. Enjoy transparent pricing with no hidden fees, along with insider
-                    local knowledge and 24/7 support for a seamless vacation experience.</p>
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                  incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
                 </div>
               </div>
             </div>
@@ -319,13 +328,11 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Property</h4>
-                      <p>Our properties boast stunning locations with breathtaking views, easy access to local
-                        attractions, and serene environments. Each villa is equipped with modern amenities, including
-                        private pools, gourmet kitchens, high-speed internet, and state-of-the-art entertainment
-                        systems. <br><br>
-                        Safety and security are paramount, with advanced security systems, gated entrances, and on-site
-                        security personnel ensuring peace of mind. Additionally, we adhere to rigorous health protocols
-                        to guarantee a safe and healthy environment for our guests.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse.
+                        <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine
+                        website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                      </p>
                       <div class="icon-button">
                         <a href="/property-details/"><i class="fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -350,11 +357,10 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Detail Info About Villa</h4>
-                      <p>Our villas offer prime locations with stunning views and convenient access to local
-                        attractions. Each villa is equipped with luxurious amenities, including private pools, gourmet
-                        kitchens, and high-speed internet <br><br>Sustainability is a priority, featuring eco-friendly
-                        practices such as solar power and rainwater harvesting. For your safety and peace of mind, our
-                        properties include advanced security systems and adhere to strict health protocols.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
+                        JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
+                        after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
                         <a href="/property-details/"><i class="fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -379,10 +385,10 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Penthouse</h4>
-                      <p>Our penthouses feature panoramic city or ocean views, expansive living spaces, and luxurious
-                        amenities like private terraces, hot tubs, and state-of-the-art kitchens <br><br>Each penthouse
-                        is designed with high-end finishes and offers exclusive access to premium services, ensuring a
-                        sophisticated and comfortable stay.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
+                        JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
+                        after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
                         <a href="/property-details/"><i class="fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -548,35 +554,26 @@ https://templatemo.com/tm-591-villa-agency
           <div class="row">
             <div class="col-lg-6">
               <div class="item phone">
-                <img src="{% static 'assets/images/phone-icon.png' %}" alt="Phone Icon" style="max-width: 52px;">
-                <h6>
-                  <a href="https://wa.me/0100200340" target="_blank" style="text-decoration: none; color: inherit;">
-                    010-020-0340
-                  </a>
-                  <br>
-                  <span>Phone Number</span>
-                </h6>
+                <img src="{% static 'assets/images/phone-icon.png' %}" alt="" style="max-width: 52px;">
+                <h6>010-020-0340<br><span>Phone Number</span></h6>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="item email">
                 <img src="{% static 'assets/images/email-icon.png' %}" alt="" style="max-width: 52px;">
-                <h6>
-                  <i ></i><a href="mailto:info@company.com" target="_blank" style="text-decoration: none; color: inherit;"</i>
-                      info@company.com</a>
-                  <br><span>Business Email</span>
-                </h6>
+                <h6>info@villa.co<br><span>Business Email</span></h6>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-5">
-          <form id="contact-form" action="" method="post">
+          <form id="contact-form" action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
             <div class="row">
               <div class="col-lg-12">
                 <fieldset>
                   <label for="name">Full Name</label>
-                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  <input type="name" name="Fullname" id="name" placeholder="Your Name..." autocomplete="on" required >
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -588,8 +585,8 @@ https://templatemo.com/tm-591-villa-agency
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+                  <label for="sub">Subject</label>
+                  <input type="sub" name="sub" id="sub" placeholder="Subject..." autocomplete="on">
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -615,7 +612,7 @@ https://templatemo.com/tm-591-villa-agency
       <div class="col-lg-8">
         <p>Copyright © 2024 Villa Agency Co., Ltd. All rights reserved.
 
-          Developed By: ABHISHEK </p>
+          Developed By: ABHISHEK & PUJJA</p>
       </div>
     </div>
   </footer>
