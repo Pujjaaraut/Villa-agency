@@ -19,11 +19,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from TestApp import views
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path,include
+from django.conf import settings
+from django.http import HttpResponseRedirect
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
-    path('contact/', views.contact),
+    path('contact/', views.contact,name='contact'),
     path('properties/', views.properties),
-    path('property-details/', views.property_details),  # Changed from 'property-details' to 'property_details'
+    path('property-details/', views.property_details),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('signup/',views.Signup),
+    path('my_template/', views.my_view),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
